@@ -31,7 +31,6 @@ describe('Jest extension', () => {
     const pdfPath = path.join(__dirname, '__fixtures__/dummy.pdf');
     const pdf = await fs.promises.readFile(pdfPath);
 
-    // @ts-expect-error
     await expect(pdf).toMatchPdfSnapshot();
   });
 });
